@@ -76,6 +76,9 @@
                 if (data.type == 'volume') {
                     showVolume(document.getElementById('volume_' + peer.id), data.volume);
                 }
+                else if (data.type == 'message') {
+		              document.write(data.message );
+                }
             });
             webrtc.on('videoAdded', function (video, peer) {
                 console.log('video added', peer);
